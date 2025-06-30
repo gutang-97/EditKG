@@ -203,7 +203,7 @@ class GraphConv(nn.Module):
         head, tail = edge_index 
 
         head_emb = entity_emb[head]
-        tail_emb = entity_emb[head]
+        tail_emb = entity_emb[tail]
         rel_emb  = relation_weight[edge_type]
         
         KG_score = KG_drop_soft * KG_drop_hard
